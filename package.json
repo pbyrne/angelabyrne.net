@@ -1,0 +1,15 @@
+{
+  "name": "angelabyrne.net",
+  "version": "1.0.0",
+  "description": "Source code powering angelabyrne.net",
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "clean": "rm -rf _site",
+    "serve": "npx @11ty/eleventy --serve"
+  },
+  "license": "UNLICENSED",
+  "type": "module",
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}
