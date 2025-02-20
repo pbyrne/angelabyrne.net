@@ -2,5 +2,50 @@
 layout: layout.liquid
 ---
 
-<h1>Testing</h1>
+<section id="products">
 
+  <h2>Products</h2>
+
+  {% for product in products %}
+    <article id="{{ product.slug }}">
+      <h3>{{ product.name }}</h3>
+      <img src="{{ product.image }}" alt="Product image for {{ product.name }}">
+      <p>{{ product.description }}</p>
+    </article>
+  {% endfor %}
+
+</section>
+
+<section id="contact">
+  <h2>Want me to make something for you?</h2>
+
+  <form data-netlify="true">
+
+    <fieldset>
+      <legend>Tell me about yourself</legend>
+
+      <label for="form_name">Name</label>
+      <input type="text" id="form_name" name="name" placeholder="Your name">
+
+      <label for="form_email">Email</label>
+      <input type="email" id="form_email" name="email" placeholder="Your name">
+
+    </fieldset>
+
+    <fieldset>
+      <legend>Tell me what you're interested in</legend>
+
+      <label for="form_product">Product</label>
+      <select id="form_product" name="product">
+        {% for product in products %}
+          <option value="{{ product.name }}">{{ product.name }}</option>
+        {% endfor %}
+      </select>
+
+      <label for="form_message">Additional details</label>
+      <textarea id="form_message" name="message" placeholder="Any additional details you can provide to help make the best craft for you."></textarea>
+
+    </fieldset>
+
+  </form>
+</h2>

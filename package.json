@@ -10,6 +10,7 @@
   "license": "UNLICENSED",
   "type": "module",
   "dependencies": {
-    "@11ty/eleventy": "^3.0.0"
+    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-img": "^6.0.1"
   }
 }
