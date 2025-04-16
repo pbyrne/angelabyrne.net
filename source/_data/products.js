@@ -24,4 +24,10 @@ export default [
     description: "Foo bar",
   }),
 
+  new Product({
+    name: "Heart",
+    image: "https://placehold.co/600x400",
+    description: "",
+  }),
+
 ]
