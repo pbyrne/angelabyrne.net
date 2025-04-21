@@ -8,7 +8,7 @@ layout: layout.liquid
 
   {% for product in products %}
     <article id="{{ product.slug }}">
-      <h3>{{ product.name }}</h3>
+      <h3><a href="/products/{{ product.slug }}">{{ product.name }}</a></h3>
       <img src="{{ product.image }}" alt="Product image for {{ product.name }}">
       <p>{{ product.description }}</p>
     </article>
@@ -50,6 +50,4 @@ layout: layout.liquid
     <fieldset>
       <input type="submit" value="Submit">
     </fieldset>
-
-  </form>
-</h2>
+</section>
