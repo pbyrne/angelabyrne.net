@@ -6,7 +6,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="description" content="Homepage of Patrick Byrne">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> {{ title | default: "Angela Byrne"}} | Angela Byrne</title>
+    <title> {{ title }} | Angela Byrne</title>
     <link rel="stylesheet" href="/assets/bundle.css">
     <script type="module" src="/assets/bundle.js"></script>
     <meta name="generator" content="{{ eleventy.generator }}">
@@ -15,21 +15,21 @@
   <body>
     <header>
       <nav>
-        <ul>
-          <li><a aria-current="{{ "page" if page.url == "/" }}" href="/">Home</a></li>
-          <li><a aria-current="{{ "page" if page.url contains "/products/" }}" href="/products/">Products</a></li>
-          <li><a aria-current="{{ "page" if page.url == "/contact/" }}" href="/contact"/>Contact</a></li>
-        </ul>
+        <a aria-current="{{ "page" if page.url == "/" }}" href="/">Home</a>
+        <a aria-current="{{ "page" if page.url.startsWith("/products/") }}" href="/products/">Products</a>
+        <a aria-current="{{ "page" if page.url == "/contact/" }}" href="/contact"/>Contact</a>
       </nav>
     </header>
 
     <main>
-      {{ content }}
+      <div id="wrapper">
+        {{ content | safe }}
+      </div>
     </main>
 
     <footer>
       <p>
-      © 2024–{{ "now" | date: "%Y" }} Angela Byrne
+      © 2024–{{ page.date.getFullYear() }} Angela Byrne
       </p>
     </footer>
   </body>
