@@ -1,0 +1,88 @@
+:root {
+  --base-font-sans: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, Adwaita Sans, Cantarell, Ubuntu, roboto, noto, helvetica, arial, sans-serif;
+  --base-font-serif: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+
+  --base-color-black: oklch(11.2% 0.01 57.74);
+  --base-color-white: oklch(100% 0.01 57.74);
+  --base-color-tan: oklch(71.46% 0.07 57.74);
+  --base-color-tan-on: oklch(5% 0.07 57.74);
+  --base-color-manilla: oklch(95.22% 0.05 96.83);
+  --base-color-green-mint: oklch(88.45% 0.08 154.61);
+  --base-color-green-mid: oklch(74.33% 0.08 160.49);
+  --base-color-green-dark: oklch(61.24% 0.09 160.96);
+
+  --theme-font-display: var(--base-font-sans);
+  --theme-font-heading: var(--base-font-serif);
+
+  --theme-color-background: var(--base-color-white);
+  --theme-color-copy: var(--base-color-black);
+
+  --theme-content-width: 800px; /* Check image widths if this ever changes */
+  --theme-large-width: 600px;
+  --theme-gutter: 1rem;
+}
+
+@view-transition {
+  navigation: auto;
+}
+
+html {
+  background-color: var(--theme-color-background);
+  color: var(--theme-color-copy);
+  font-family: var(--theme-font-display);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  /* Make content fill screen if too short (for double-bar bottom border at bottom or lower)  */
+  display:grid;
+  grid-template-rows:auto 1fr auto;
+  grid-template-columns:100%;
+  grid-template-areas: 'header' 'main' 'footer';
+  min-height: 100svh;
+}
+
+header {
+  grid-area: header;
+  background-color: var(--base-color-tan);
+  color: var(--base-color-tan-on);
+
+  nav {
+    text-align: center;
+    font-size: 1.5rem;
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      display: inline-block;
+      margin: 0.5rem;
+    }
+
+    a {
+      color: var(--theme-color-copy);
+      padding: 0.25rem 0.5rem;
+      transition: color 0.3s ease;
+    }
+
+    a:hover, a:focus-visible, a[aria-current=page] {
+      color: var(--base-color-green-dark);
+      border-bottom: 1px solid var(--base-color-green-dark);
+    }
+  }
+}
+
+main {
+  grid-area: main;
+  padding: var(--theme-gutter);
+}
+
+footer {
+  grid-area: footer;
+  margin-top: auto; /* tie into `display: flex` on body to push footer to bottom of page if content is too short */
+  text-align: center;
+}

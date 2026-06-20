@@ -1,9 +1,5 @@
 export default async function(eleventyConfig) {
-  return {
-    dir: {
-      input: "source",
-      output: "_site",
-    },
-  }
+  eleventyConfig.setInputDirectory("source");
+  eleventyConfig.addPassthroughCopy("source/assets");
 }
 
