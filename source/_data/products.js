@@ -17,21 +17,21 @@ export default [
   new Product({
     attribution: `Pattern by <a href="https://www.myamigurumifarm.com">myamigurumifarm.com</a>`,
     description: "Approx. X″ tall by X″ wide",
-    image: "https://placehold.co/600x400",
+    image: "images/coffee.jpeg",
     name: "Coffee Cup amigurumi",
     price: 15,
   }),
 
   new Product({
     description: "Approx. X″ tall by X″ wide",
-    image: "https://placehold.co/600x400",
+    image: "images/placeholder.png",
     name: "Ear warmers (adult)",
     price: 20,
   }),
 
   new Product({
     description: "Approx. X″ tall by X″ wide",
-    image: "https://placehold.co/600x400",
+    image: "images/placeholder.png",
     name: "Ear warmers (child)",
     price: 15,
   }),
@@ -39,7 +39,7 @@ export default [
   new Product({
     attribution: `Pattern by <a href="https://www.loopsandlovecrochet.com">www.loopsandlovecrochet.com</a>`,
     description: "Approx. X″ tall by X″ wide",
-    image: "https://placehold.co/600x400",
+    image: "images/heart.jpeg",
     name: "Heart stuffies",
     price: 10,
   }),
@@ -47,7 +47,7 @@ export default [
   new Product({
     attribution: `Original pattern inspired by <a href="https://www.etsy.com/shop/HandSpunBits">HandSpunBits on Etsy</a>`,
     description: "Approx. X″ tall by X″ wide",
-    image: "https://placehold.co/600x400",
+    image: "images/sleeve.jpeg",
     name: "Cup sleeves",
     price: 5,
   }),
@@ -55,7 +55,7 @@ export default [
   new Product({
     attribution: `Pattern by <a href="https://www.sweetsofties.com">sweetsofties.com</a>`,
     description: "Approx. X″ tall by X″ wide. Due to their tiny size, octo squishes may not include all colors of selected Pride yarn.",
-    image: "https://placehold.co/600x400",
+    image: "images/placeholder.png",
     name: "Octo squishes",
     price: 5,
   }),
@@ -63,7 +63,7 @@ export default [
   new Product({
     attribution: `Pattern by <a href="https://www.youtube.com/@tallermanualperu">tallermanualperu on YouTube</a>`,
     description: "Approx. X″ tall by X″ wide",
-    image: "https://placehold.co/600x400",
+    image: "images/placeholder.png",
     name: "Roses",
     price: 15,
   }),

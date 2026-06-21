@@ -99,3 +99,33 @@ footer {
   margin-top: auto; /* tie into `display: flex` on body to push footer to bottom of page if content is too short */
   text-align: center;
 }
+
+h2 {
+  color: var(--base-color-green-dark);
+}
+
+.products__grid {
+  @media screen and (width >= 600px) {
+    display: grid;
+    grid-template-columns: 260px 260px 260px;
+    gap: 10px;
+  }
+
+  .article {
+    border: 1px solid var(--base-color-green-mid);
+    border-radius: 1rem;
+    overflow: clip;
+  }
+
+  h3 {
+    font-size: 1rem;
+    text-align: center;
+    margin: 0.5rem;
+  }
+
+  a {
+    color: var(--base-color-green-mid);
+  }
+
+
+}

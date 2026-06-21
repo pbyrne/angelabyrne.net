@@ -3,7 +3,7 @@ layout: layout
 title: "Home"
 ---
 
-<section id="intro">
+<section>
   <h2>Welcome to my Pride crochet! </h2>
 
   <p>
@@ -41,13 +41,21 @@ title: "Home"
   </p>
 </section>
 
-<section id="products">
-
+<section>
   <h2>Products</h2>
 
-  {% include "products.njk" %}
+  <section class="products products__grid">
+    {% for product in products %}
+      <article class="article" id="{{ product.slug }}">
+        <a href="/products/{{ product.slug }}">
+          <img src="{{ product.image }}" alt="Product image for {{ product.name }}" eleventy:widths="260">
+          <h3>{{ product.name }}</h3>
+        </a>
+      </article>
+    {% endfor %}
+  </section>
 </section>
 
-<section id="contact">
+<section>
   {% include "contact.njk" %}
 </section>

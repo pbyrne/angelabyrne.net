@@ -11,7 +11,9 @@ eleventyComputed:
 
 <article id="{{ product.slug }}">
   <h1>{{ product.name }}</h1>
-  <img src="{{ product.image }}" alt="Product image for {{ product.name }}">
-  <p>{{ product.description }}</p>
-  <p>{{ product.attribution }}</p>
+  <img src="{{ product.image }}" alt="Product image for {{ product.name }}" eleventy:widths="800">
+  <p>{{ product.description | safe }}</p>
+  <p>{{ product.attribution | safe }}</p>
 </article>
+
+{% include "contact.njk" %}
