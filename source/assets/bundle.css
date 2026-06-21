@@ -126,6 +126,26 @@ h2 {
   a {
     color: var(--base-color-green-mid);
   }
+}
 
+.contact {
+  fieldset {
+    border: none;
+    padding: 0;
+    margin: 1rem 0;
+  }
 
+  legend {
+    padding: 0;
+    color: var(--base-color-green-mid);
+  }
+
+  label {
+    display: block;
+    margin-top: 1rem;
+  }
+
+  textarea {
+    width: 400px;
+  }
 }
