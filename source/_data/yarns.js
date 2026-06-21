@@ -2,7 +2,8 @@ export default [
   "Rainbow",
   "Trans",
   "Non-binary",
-  "Intersex Lesbian",
+  "Intersex",
+  "Lesbian",
   "Pansexual",
   "Bisexual",
   "Asexual",
