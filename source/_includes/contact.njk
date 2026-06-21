@@ -24,7 +24,7 @@
     <select id="form_product" name="product">
       <option value="" disabled selected>Choose a product</option>
       {% for product in products %}
-        <option value="{{ product.name }}">{{ product.name }}</option>
+      <option value="{{ product.name }}" {% if page.url == product.url %}selected{% endif %}>{{ product.name }} | {{ page.url == product.url }} </option>
       {% endfor %}
     </select>
 

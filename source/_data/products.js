@@ -10,6 +10,10 @@ class Product {
     Object.assign(this, data);
     this.slug = this.slug || this.name.toLowerCase().replace(/[^a-z0-9\s-]/g, "").replace(/\s+/g, "-")
   }
+
+  get url() {
+    return `/products/${this.slug}/`
+  }
 }
 
 export default [

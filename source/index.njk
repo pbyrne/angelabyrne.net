@@ -47,7 +47,7 @@ title: "Home"
   <section class="products products__grid">
     {% for product in products %}
       <article class="article" id="{{ product.slug }}">
-        <a href="/products/{{ product.slug }}">
+        <a href="{{ product.url }}">
           <img src="{{ product.image }}" alt="Product image for {{ product.name }}" eleventy:widths="260">
           <h3>{{ product.name }}</h3>
         </a>
