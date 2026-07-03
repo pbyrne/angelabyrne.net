@@ -2,20 +2,25 @@
   --base-font-sans: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, Adwaita Sans, Cantarell, Ubuntu, roboto, noto, helvetica, arial, sans-serif;
   --base-font-serif: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
 
-  --base-color-black: oklch(11.2% 0.01 57.74);
-  --base-color-white: oklch(100% 0.01 57.74);
-  --base-color-tan: oklch(71.46% 0.07 57.74);
-  --base-color-tan-on: oklch(5% 0.07 57.74);
-  --base-color-manilla: oklch(95.22% 0.05 96.83);
-  --base-color-green-mint: oklch(88.45% 0.08 154.61);
-  --base-color-green-mid: oklch(74.33% 0.08 160.49);
-  --base-color-green-dark: oklch(61.24% 0.09 160.96);
+  --base-color-black: oklch(5.2% 0.11 264.71);
+  --base-color-white: oklch(99.2% 0.02 264.71);
+  --base-color-purple: oklch(60.6% 0.11 264.71);
+  --base-color-purple-on: oklch(100% 0.11 264.71);
+  --base-color-pink: oklch(64.61% 0.14 5.09);
+  --base-color-pink-on: oklch(100% 0.14 5.09);
+  --base-color-yellow: oklch(89.61% 0.18 97.55);
+  --base-color-yellow-on: oklch(100% 0.18 97.55);
+  --base-color-green: oklch(81.52% 0.16 125.03);
+  --base-color-green-on: oklch(100% 0.16 125.03);
+
 
   --theme-font-display: var(--base-font-sans);
   --theme-font-heading: var(--base-font-serif);
 
   --theme-color-background: var(--base-color-white);
   --theme-color-copy: var(--base-color-black);
+  --theme-color-primary: var(--base-color-purple);
+  --theme-color-secondary: var(--base-color-pink);
 
   --theme-content-width: 800px; /* Check image widths if this ever changes */
   --theme-large-width: 600px;
@@ -46,8 +51,8 @@ body {
 
 header {
   grid-area: header;
-  background-color: var(--base-color-tan);
-  color: var(--base-color-tan-on);
+  background-color: var(--base-color-purple);
+  color: var(--base-color-purple-on);
 
   nav {
     text-align: center;
@@ -101,7 +106,7 @@ footer {
 }
 
 h2 {
-  color: var(--base-color-green-dark);
+  color: var(--base-color-pink);
 }
 
 .products__grid {
@@ -112,7 +117,7 @@ h2 {
   }
 
   .article {
-    border: 1px solid var(--base-color-green-mid);
+    border: 1px solid var(--base-color-purple);
     border-radius: 1rem;
     overflow: clip;
   }
@@ -124,7 +129,7 @@ h2 {
   }
 
   a {
-    color: var(--base-color-green-mid);
+    color: var(--base-color-pink);
   }
 }
 
@@ -137,7 +142,7 @@ h2 {
 
   legend {
     padding: 0;
-    color: var(--base-color-green-mid);
+    color: var(--base-color-pink);
   }
 
   label {
