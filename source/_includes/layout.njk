@@ -14,8 +14,8 @@
 
   <body>
     <header>
+      <h1><a aria-current="{{ "page" if page.url == "/" }}" href="/">Angela’s Pride Crafts</a></h1>
       <nav>
-        <a aria-current="{{ "page" if page.url == "/" }}" href="/">Home</a>
         <a aria-current="{{ "page" if page.url.startsWith("/products/") }}" href="/products/">Products</a>
         <a aria-current="{{ "page" if page.url == "/contact/" }}" href="/contact"/>Contact me</a>
       </nav>

@@ -1,6 +1,7 @@
 :root {
   --base-font-sans: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, Adwaita Sans, Cantarell, Ubuntu, roboto, noto, helvetica, arial, sans-serif;
   --base-font-serif: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  --base-font-cursive: Apple Chancery, Comic Sans MS, cursive, sans-serif;
 
   --base-color-black: oklch(5.2% 0.11 264.71);
   --base-color-white: oklch(99.2% 0.02 264.71);
@@ -50,27 +51,41 @@ body {
 }
 
 header {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   grid-area: header;
-  background-color: var(--base-color-purple);
+  gap: 2rem;
+  background: var(--base-color-purple);
+  background: linear-gradient(0deg, var(--base-color-purple) 60%, var(--base-color-pink) 100%);
   color: var(--base-color-purple-on);
+  padding: 2rem 2rem 1rem;
+
+  h1 {
+    font-family: var(--base-font-cursive);
+    font-size: 1.25rem;
+    margin: 0;
+  }
+
+  a {
+    color: inherit;
+    font-size: 1.25rem;
+    font-weight: 300;
+    text-decoration: none;
+  }
 
   nav {
-    text-align: center;
-    font-size: 1.5rem;
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    max-width: var(--theme-content-width);
-    margin: 1rem auto;
+    grid-column: 2 / -1;
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-end;
 
     a {
-      color: var(--theme-color-copy);
-      text-decoration: none;
-      transition: font-weight 0.3s ease;
+      border-bottom: 2px solid transparent;
+      transition: border 0.3s ease-in-out;
     }
 
     & a:hover, a:focus-visible, a[aria-current=page] {
-      font-weight: bold;
+      border-bottom: 2px solid var(--base-color-yellow);
     }
   }
 }
