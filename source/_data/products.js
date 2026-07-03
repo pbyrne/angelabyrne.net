@@ -96,7 +96,7 @@ export default [
       "images/tote-trans.jpeg",
     ],
     name: "Tote bag",
-    price: 100,
+    price: 60,
   }),
 
 ]
