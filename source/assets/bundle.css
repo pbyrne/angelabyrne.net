@@ -2,6 +2,8 @@
   --base-font-sans: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, Adwaita Sans, Cantarell, Ubuntu, roboto, noto, helvetica, arial, sans-serif;
   --base-font-serif: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
   --base-font-cursive: Apple Chancery, Comic Sans MS, cursive, sans-serif;
+  --base-font-weight-light: 300;
+  --base-font-weight-medium: 500;
 
   --base-color-black: oklch(5.2% 0.11 264.71);
   --base-color-white: oklch(99.2% 0.02 264.71);
@@ -36,6 +38,7 @@ html {
   background-color: var(--theme-color-background);
   color: var(--theme-color-copy);
   font-family: var(--theme-font-display);
+  font-weight: var(--base-font-weight-light);
 }
 
 body {
@@ -63,13 +66,13 @@ header {
   h1 {
     font-family: var(--base-font-cursive);
     font-size: 1.25rem;
+    font-weight: var(--base-font-weight-light);
     margin: 0;
   }
 
   a {
     color: inherit;
     font-size: 1.25rem;
-    font-weight: 300;
     text-decoration: none;
   }
 
@@ -109,7 +112,7 @@ main {
 
   a {
     text-decoration: underline;
-    font-weight: 500;
+    font-weight: var(--base-font-weight-medium);
   }
 
 }
@@ -122,6 +125,7 @@ footer {
 
 h2 {
   color: var(--base-color-pink);
+  font-weight: var(--base-font-weight-light);
 }
 
 .products__grid {
@@ -139,6 +143,7 @@ h2 {
 
   h3 {
     font-size: 1rem;
+    font-weight: var(--base-font-weight-light);
     text-align: center;
     margin: 0.5rem;
   }
