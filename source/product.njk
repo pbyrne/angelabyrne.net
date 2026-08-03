@@ -4,9 +4,9 @@ pagination:
   data: products
   size: 1
   alias: product
-permalink: "{{product.url }}"
+permalink: "{{ product.url }}"
 eleventyComputed:
-  title: "{{product.name}}"
+  title: "{{ product.name}}"
 ---
 
 <article id="{{ product.slug }}">
