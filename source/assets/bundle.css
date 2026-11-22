@@ -8,13 +8,12 @@
   --base-color-black: oklch(5.2% 0.11 264.71);
   --base-color-white: oklch(99.2% 0.02 264.71);
   --base-color-purple: oklch(60.6% 0.11 264.71);
-  --base-color-purple-on: oklch(100% 0.11 264.71);
+  --base-color-purple-dark: oklch(30% 0.11 264.71);
+  --base-color-purple-light: oklch(90% 0.11 264.71);
   --base-color-pink: oklch(64.61% 0.14 5.09);
-  --base-color-pink-on: oklch(100% 0.14 5.09);
+  --base-color-pink-dark: oklch(30% 0.14 5.09);
+  --base-color-pink-light: oklch(100% 0.14 5.09);
   --base-color-yellow: oklch(89.61% 0.18 97.55);
-  --base-color-yellow-on: oklch(100% 0.18 97.55);
-  --base-color-green: oklch(81.52% 0.16 125.03);
-  --base-color-green-on: oklch(100% 0.16 125.03);
 
 
   --theme-font-display: var(--base-font-sans);
@@ -55,18 +54,19 @@ body {
 
 header {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr minmax(0, var(--theme-content-width)) 1fr;
   grid-area: header;
   gap: 0.5rem 2rem;
-  background: var(--base-color-purple);
-  background: linear-gradient(0deg, var(--base-color-purple) 60%, var(--base-color-pink) 100%);
-  color: var(--base-color-purple-on);
-  padding: 2rem 2rem 1rem;
+  padding: 1rem 2rem;
 
   h1 {
+    align-self: center;
+    color: var(--base-color-purple);
     font-family: var(--base-font-cursive);
-    font-size: 1.25rem;
+    font-size: 3rem;
     font-weight: var(--base-font-weight-light);
+    grid-column: 2;
     margin: 0;
 
     @media screen and (width < 600px) {
@@ -77,12 +77,12 @@ header {
 
   a {
     color: inherit;
-    font-size: 1.25rem;
     text-decoration: none;
   }
 
   nav {
-    grid-column: 2 / -1;
+    font-size: 1.25rem;
+    grid-column: 3;
     display: flex;
     gap: 2rem;
     justify-content: flex-end;
@@ -93,12 +93,13 @@ header {
     }
 
     a {
-      border-bottom: 2px solid transparent;
+      align-self: center;
+      border-top: 3px solid transparent;
       transition: border 0.3s ease-in-out;
     }
 
     & a:hover, a:focus-visible, a[aria-current=page] {
-      border-bottom: 2px solid var(--base-color-yellow);
+      border-top: 3px solid var(--base-color-yellow);
     }
   }
 }
@@ -148,9 +149,16 @@ h2 {
   }
 
   .article {
-    border: 1px solid var(--base-color-purple);
+    /* border: 1px solid var(--base-color-purple); */
+    box-shadow: 1px 1px 3px var(--base-color-pink);
     border-radius: 1rem;
     overflow: clip;
+    transition: box-shadow 0.2s ease-in-out;
+
+    &:hover {
+      box-shadow: 2px 2px 3px var(--base-color-pink);
+    }
+
   }
 
   h3 {
@@ -190,4 +198,14 @@ h2 {
 img {
   max-width: 100%;
   height: auto;
+}
+
+.hero {
+  background: var(--base-color-purple-light);
+  border-radius: 1rem;
+  padding: 1rem;
+
+  h2 {
+    margin-top: 0;
+  }
 }
