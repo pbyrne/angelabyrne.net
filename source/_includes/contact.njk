@@ -10,10 +10,10 @@
     <legend>Tell me about yourself</legend>
 
     <label for="form_name">Name</label>
-    <input type="text" required id="form_name" name="name" placeholder="Your name">
+    <input type="text" required id="form_name" name="name" placeholder="Your name" autocomplete="name">
 
     <label for="form_email">Email</label>
-    <input type="email" required id="form_email" name="email" placeholder="Your name">
+    <input type="email" required id="form_email" name="email" placeholder="Your email address" autocomplete="email">
 
   </fieldset>
 
@@ -28,8 +28,8 @@
       {% endfor %}
     </select>
 
-    <label for="form_product">Yarn</label>
-    <select id="form_product" name="product">
+    <label for="form_yarn">Yarn</label>
+    <select id="form_yarn" name="yarn">
       <option value="" disabled selected>Which yarn?</option>
       {% for yarn in yarns %}
       <option value="{{ yarn }}">{{ yarn }} </option>
