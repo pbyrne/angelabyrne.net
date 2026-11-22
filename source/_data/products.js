@@ -23,7 +23,7 @@ export default [
 
   new Product({
     attribution: `Pattern by <a href="https://www.myamigurumifarm.com">myamigurumifarm.com</a>`,
-    description: "Approx. X″ tall by X″ wide",
+    description: "Approx. 3″ tall by 3″ wide",
     images: [
       "images/coffee.jpeg",
     ],
@@ -51,7 +51,7 @@ export default [
 
   new Product({
     attribution: `Pattern by <a href="https://www.loopsandlovecrochet.com">www.loopsandlovecrochet.com</a>`,
-    description: "Approx. X″ tall by X″ wide",
+    description: "Approx. 4″ tall by 4″ wide",
     images: [
       "images/heart.jpeg",
     ],
@@ -61,7 +61,7 @@ export default [
 
   new Product({
     attribution: `Original pattern inspired by <a href="https://www.etsy.com/shop/HandSpunBits">HandSpunBits on Etsy</a>`,
-    description: "Approx. X″ tall by X″ wide",
+    description: "Approx. 3 ½″ tall by 4″ wide",
     images: [
       "images/sleeve.jpeg",
     ],
